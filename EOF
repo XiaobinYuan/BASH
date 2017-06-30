@@ -1,0 +1,29 @@
+#!/bin/bash
+
+##EOF##
+cat << EOF > /tmp/eof.txt
+Test content to eof.txt.
+  A new Line.
+    Third line.
+EOF
+
+echo ${string}
+##testString
+cat << EOF
+> ${string}
+> EOF
+##testString
+
+cat << 'EOF'
+${string}
+EOF
+##${string}
+
+cat << EOF | sed 's/a/b/g'
+> foo
+> bar
+> abc
+> EOF
+##foo
+##bbr
+##bbc
