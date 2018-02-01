@@ -19,3 +19,4 @@ echo ${string:-1}
 ##testString
 echo ${string:-1:-5}
 ##testString
+ 
