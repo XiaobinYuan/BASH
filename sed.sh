@@ -14,17 +14,7 @@
 #/Server/Linux/ThirdParty/Bamboo/MIX/smphbamagent.som.local
 
 # Replace \n to whitespace
-for item in `cat setCollector-removingData.txt | awk -F / '{print $NF}' | sed ':a;N;$!ba;s/\n/ /g'`; do rm -rf ./$item; done
-#smppkn01041.som.local
-#smppkn01042.som.local
-#smppkn01043.som.local
-#smppkn01044.som.local
-#smppkn01045.som.local
-#smppkn01046.som.local
-#smppkn01048.som.local
-#smppkn01049.som.local
-#smppkn01050.som.local
-#smppkn01051.som.local
-#smppkn01052.som.local
-#smppkn01053.som.local
-#smphbamagent.som.local
+tmp=''
+for item in `cat setCollector-removingData.txt | awk -F / '{print $NF}' | sed ':a;N;$!ba;s/\n/ /g'`; do tmp="$tmp $item"; done
+$ echo $tmp
+#smppkn01041.som.local smppkn01042.som.local smppkn01043.som.local smppkn01044.som.local smppkn01045.som.local smppkn01046.som.local smppkn01048.som.local smppkn01049.som.local smppkn01050.som.local smppkn01051.som.local smppkn01052.som.local smppkn01053.som.local smphbamagent.som.local
